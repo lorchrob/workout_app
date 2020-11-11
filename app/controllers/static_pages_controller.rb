@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def log
+  def log_run
   end
 
   def generate
