@@ -3,9 +3,13 @@
     <%= link_to "sample app", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", '#' %></li>
-        <li><%= link_to "Help", '#' %></li>
+        <li><%= link_to "Home", landing_path %></li>
+        <li><%= link_to "Exercise Log",  log_path %></li>
+        <li><%= link_to "Generate Workout",  generate_path %></li>
+        <li><%= link_to "Statistics",  stats_path %></li>
         <li><%= link_to "Log in", '#' %></li>
+        <li><%= link_to "About", about_path %></li>
+        
       </ul>
     </nav>
   </div>
