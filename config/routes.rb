@@ -11,4 +11,9 @@ Rails.application.routes.draw do
 
   # Users
   get '/signup', to: 'users#new'
+  
+  get '/log_exercise', to: 'runs#new'
+  
+  resources :users
+  resources :runs
 end
