@@ -10,4 +10,14 @@ Else if abs:
   Hash of exercises done (exercise, duration)
 Else (lifts):
   Hash of lifts done (lift, count)
+  
+  List of workouts logged
+  Buttons to log more workouts
 -->
+<% @runs.each do |run| %>
+  <div>Length (miles): <%= run.length %>, Duration (minutes): <%= run.duration %> </div>
+<% end %> <br>
+
+<%= button_to "Log new run", { action: "new", controller: "runs"}, method: "get" %> <br>
+<%= button_to "Log new ab workout", { action: "new", controller: "runs"}, method: "get" %> <br>
+<%= button_to "Log new lifting workout", { action: "new", controller: "runs"}, method: "get" %>

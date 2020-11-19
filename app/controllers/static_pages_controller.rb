@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def log_run
+    @runs = Run.all
   end
 
   def generate

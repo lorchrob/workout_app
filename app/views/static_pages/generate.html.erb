@@ -9,3 +9,14 @@ If potential abs:
 If potential weights:
   Ability to edit list of potential lifts
 -->
+<%= form_tag do %>
+  <%= check_box_tag(:run) %>
+  <%= label_tag(:run, "Run") %> <Br>
+  <%= check_box_tag(:abs) %>
+  <%= label_tag(:abs, "Abs") %> <Br>
+  <%= check_box_tag(:weights) %>
+  <%= label_tag(:weights, "Weights") %> <Br>
+    
+  <%= label_tag(:duration, "Duration") %>
+  <%= number_field(:duration, nil) %>
+<% end %>

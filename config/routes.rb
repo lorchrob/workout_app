@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   # Root
   root "static_pages#landing"
   
+  # Resources
+  resources :users
+  resources :runs
+  
   # Static pages
   get '/landing', to: 'static_pages#landing'
   get '/about', to: 'static_pages#about'
@@ -12,8 +16,6 @@ Rails.application.routes.draw do
   # Users
   get '/signup', to: 'users#new'
   
+  # Runs
   get '/log_exercise', to: 'runs#new'
-  
-  resources :users
-  resources :runs
 end
