@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   
   # Runs
   get '/log_exercise', to: 'runs#new'
+  
+  get 'parse_input', to: 'static_pages#generate_parse'
 end

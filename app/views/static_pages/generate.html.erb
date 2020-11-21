@@ -4,12 +4,10 @@
 Form:
 Desired workout type (checkbox, minimum of one selected) (optional) 
 Duration (minutes, required)
-If potential abs:
-  Ability to edit list of potential ab exercises
-If potential weights:
-  Ability to edit list of potential lifts
+
+TODO: Restrict duration to integers, and give a minimum and maximum time
 -->
-<%= form_tag do %>
+<%= form_tag("parse_input", method: "get") do %>
   <%= check_box_tag(:run) %>
   <%= label_tag(:run, "Run") %> <Br>
   <%= check_box_tag(:abs) %>
@@ -18,5 +16,7 @@ If potential weights:
   <%= label_tag(:weights, "Weights") %> <Br>
     
   <%= label_tag(:duration, "Duration") %>
-  <%= number_field(:duration, nil) %>
+  <%= number_field(:duration, nil) %> <br>
+  
+  <%= submit_tag("Generate!") %>
 <% end %>
