@@ -9,6 +9,8 @@ class StaticPagesController < ApplicationController
 
   def log_run
     @runs = Run.all
+    @weight_workouts = WeightWorkout.all
+    @ab_workouts = AbWorkout.all
   end
 
   def generate

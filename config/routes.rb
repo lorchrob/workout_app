@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # Resources
   resources :users
   resources :runs
+  resources :ab_workouts
+  resources :weight_workouts
   
   # Static pages
   get '/landing', to: 'static_pages#landing'
@@ -15,9 +17,6 @@ Rails.application.routes.draw do
 
   # Users
   get '/signup', to: 'users#new'
-  
-  # Runs
-  get '/log_exercise', to: 'runs#new'
   
   get 'parse_input', to: 'static_pages#generate_parse'
 end
