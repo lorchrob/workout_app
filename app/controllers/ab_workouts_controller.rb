@@ -19,6 +19,6 @@ class AbWorkoutsController < ApplicationController
   private
   
     def user_params
-      params.require(:ab_workout).permit(:duration)
+      params.require(:ab_workout).permit(:duration, :date)
     end
 end

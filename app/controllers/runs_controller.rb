@@ -19,6 +19,6 @@ class RunsController < ApplicationController
   private
   
     def user_params
-      params.require(:run).permit(:length, :duration)
+      params.require(:run).permit(:length, :duration, :date)
     end
 end
