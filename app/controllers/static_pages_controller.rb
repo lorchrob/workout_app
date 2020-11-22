@@ -9,8 +9,8 @@ class StaticPagesController < ApplicationController
 
   def log_run
     @runs = Run.order(:date)
-    @weight_workouts = WeightWorkout.all
-    @ab_workouts = AbWorkout.all
+    @weight_workouts = WeightWorkout.order(:date)
+    @ab_workouts = AbWorkout.order(:date)
   end
 
   def generate
