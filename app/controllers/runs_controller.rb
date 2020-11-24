@@ -8,7 +8,7 @@ class RunsController < ApplicationController
   end
   
   def create
-    @run = Run.new(user_params)
+    @run = current_user.runs.build(user_params)
     if @run.save
      redirect_to @run
     else

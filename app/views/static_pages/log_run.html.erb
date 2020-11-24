@@ -19,14 +19,14 @@ Else (lifts):
   <div>Date: <%= run.date %>, Length (miles): <%= run.length %>, Duration (minutes): <%= run.duration %> </div>
 <% end %> <br>
 
-<h3>Weight Workouts</h3>
-<% @weight_workouts.each do |weight_workout| %>
-  <div>Date: <%= weight_workout.date %>, Duration (minutes): <%= weight_workout.duration %> </div>
-<% end %> <br>
-
 <h3>Ab Workouts</h3>
 <% @ab_workouts.each do |ab_workout| %>
   <div>Date: <%= ab_workout.date %>, Duration (minutes): <%= ab_workout.duration %> </div>
+<% end %> <br>
+
+<h3>Weight Workouts</h3>
+<% @weight_workouts.each do |weight_workout| %>
+  <div>Date: <%= weight_workout.date %>, Duration (minutes): <%= weight_workout.duration %> </div>
 <% end %> <br>
 
 <%= button_to "Log new run", { action: "new", controller: "runs"}, method: "get" %> <br>

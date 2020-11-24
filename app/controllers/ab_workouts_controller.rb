@@ -8,7 +8,7 @@ class AbWorkoutsController < ApplicationController
   end
   
   def create
-    @ab_workout = AbWorkout.new(user_params)
+    @ab_workout = current_user.ab_workouts.build(user_params)
     if @ab_workout.save
      redirect_to @ab_workout
     else

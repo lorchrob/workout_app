@@ -9,11 +9,11 @@ TODO: Restrict duration to integers, and give a minimum and maximum time
 -->
 <%= form_tag("parse_input", method: "get") do %>
   <%= check_box_tag(:run) %>
-  <%= label_tag(:run, "Run") %> <Br>
+  <%= label_tag(:run, "Run") %> <br>
   <%= check_box_tag(:abs) %>
-  <%= label_tag(:abs, "Abs") %> <Br>
+  <%= label_tag(:abs, "Abs") %> <br>
   <%= check_box_tag(:weights) %>
-  <%= label_tag(:weights, "Weights") %> <Br>
+  <%= label_tag(:weights, "Weights") %> <br>
     
   <%= label_tag(:duration, "Duration") %>
   <%= number_field(:duration, nil) %> <br>

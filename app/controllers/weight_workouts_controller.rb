@@ -8,7 +8,7 @@ class WeightWorkoutsController < ApplicationController
   end
   
   def create
-    @weight_workout = WeightWorkout.new(user_params)
+    @weight_workout = current_user.weight_workouts.build(user_params)
     if @weight_workout.save
      redirect_to @weight_workout
     else
