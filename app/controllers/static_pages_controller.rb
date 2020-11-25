@@ -23,7 +23,4 @@ class StaticPagesController < ApplicationController
     @weights = params[:weights].to_i
     @run_duration, @ab_duration, @weight_duration, @ab_exercises, @lifts = generate_workout(@duration, @run, @abs, @weights)
   end
-
-  def stats
-  end
 end

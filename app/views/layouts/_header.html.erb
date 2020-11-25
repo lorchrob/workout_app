@@ -8,7 +8,6 @@
         <% if logged_in? %>
           <li><%= link_to "Exercise Log",  log_path %></li>
           <li><%= link_to "Generate Workout",  generate_path %></li>
-          <li><%= link_to "Statistics",  stats_path %></li>
           <li><%= link_to "Log out", logout_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Log in", login_path %></li>

@@ -15,6 +15,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to the Sample App!"
       redirect_to "/landing"
     else
+      flash.now[:danger] = "Error submitting form"
       render 'new'
     end
   end

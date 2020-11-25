@@ -12,6 +12,7 @@ class AbWorkoutsController < ApplicationController
     if @ab_workout.save
      redirect_to "/log"
     else
+      flash.now[:danger] = "Error submitting form"
       render 'new'
     end
   end

@@ -12,6 +12,7 @@ class WeightWorkoutsController < ApplicationController
     if @weight_workout.save
      redirect_to "/log"
     else
+      flash.now[:danger] = "Error submitting form"
       render 'new'
     end
   end

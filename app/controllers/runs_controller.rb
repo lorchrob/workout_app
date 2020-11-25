@@ -12,6 +12,7 @@ class RunsController < ApplicationController
     if @run.save
      redirect_to "/log"
     else
+      flash.now[:danger] = "Error submitting form"
       render 'new'
     end
   end

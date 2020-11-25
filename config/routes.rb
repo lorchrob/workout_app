@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/log', to: 'static_pages#log_run'
   get '/generate', to: 'static_pages#generate'
-  get '/stats', to: 'static_pages#stats'
   
   # Sessions
   get    '/login',   to: 'sessions#new'
