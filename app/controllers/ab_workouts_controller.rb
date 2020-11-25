@@ -10,7 +10,7 @@ class AbWorkoutsController < ApplicationController
   def create
     @ab_workout = current_user.ab_workouts.build(user_params)
     if @ab_workout.save
-     redirect_to @ab_workout
+     redirect_to "/log"
     else
       render 'new'
     end

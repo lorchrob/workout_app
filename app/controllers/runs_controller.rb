@@ -10,7 +10,7 @@ class RunsController < ApplicationController
   def create
     @run = current_user.runs.build(user_params)
     if @run.save
-     redirect_to @run
+     redirect_to "/log"
     else
       render 'new'
     end

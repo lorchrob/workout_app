@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       reset_session
       log_in @user
       flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      redirect_to "/landing"
     else
       render 'new'
     end
