@@ -16,19 +16,19 @@ Else (lifts):
 -->
 <h3>Runs</h3>
 <% @runs.each do |run| %>
-  <div>Date: <%= run.date %>, Length (miles): <%= run.length %>, Duration (minutes): <%= run.duration %> </div>
+  <p>Date: <%= run.date %>, Length (miles): <%= run.length %>, Duration (minutes): <%= run.duration %> </p>
 <% end %> <br>
 
 <h3>Ab Workouts</h3>
 <% @ab_workouts.each do |ab_workout| %>
-  <div>Date: <%= ab_workout.date %>, Duration (minutes): <%= ab_workout.duration %> </div>
+  <p>Date: <%= ab_workout.date %>, Duration (minutes): <%= ab_workout.duration %> </p>
 <% end %> <br>
 
 <h3>Weight Workouts</h3>
 <% @weight_workouts.each do |weight_workout| %>
-  <div>Date: <%= weight_workout.date %>, Duration (minutes): <%= weight_workout.duration %> </div>
+  <p>Date: <%= weight_workout.date %>, Duration (minutes): <%= weight_workout.duration %> </p>
 <% end %> <br>
 
-<%= button_to "Log new run", { action: "new", controller: "runs"}, method: "get" %> <br>
-<%= button_to "Log new ab workout", { action: "new", controller: "ab_workouts"}, method: "get" %> <br>
-<%= button_to "Log new lifting workout", { action: "new", controller: "weight_workouts"}, method: "get" %>
+<%= button_to "Log new run", { action: "new", controller: "runs"}, { method: "get", class: "btn-custom" } %> <br>
+<%= button_to "Log new ab workout", { action: "new", controller: "ab_workouts"}, { method: "get", class: "btn-custom" } %> <br>
+<%= button_to "Log new lifting workout", { action: "new", controller: "weight_workouts"}, { method: "get", class: "btn-custom" } %>

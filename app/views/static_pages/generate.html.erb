@@ -13,10 +13,10 @@ TODO: Restrict duration to integers, and give a minimum and maximum time
   <%= check_box_tag(:abs) %>
   <%= label_tag(:abs, "Abs") %> <br>
   <%= check_box_tag(:weights) %>
-  <%= label_tag(:weights, "Weights") %> <br>
+  <%= label_tag(:weights, "Weights") %> <br><br>
     
   <%= label_tag(:duration, "Duration") %>
-  <%= number_field(:duration, nil) %> <br>
+  <%= number_field(:duration, nil) %> <br><br>
   
-  <%= submit_tag("Generate!") %>
+  <%= submit_tag("Generate!", class: "btn-custom" ) %>
 <% end %>
