@@ -16,7 +16,7 @@ TODO: Restrict duration to integers, and give a minimum and maximum time
   <%= label_tag(:weights, "Weights") %> <br><br>
     
   <%= label_tag(:duration, "Duration") %>
-  <%= number_field(:duration, nil) %> <br><br>
+  <%= number_field(:duration, nil, min: 1, max: 180, required: true) %> <br><br>
   
   <%= submit_tag("Generate!", class: "btn btn-custom" ) %>
 <% end %>

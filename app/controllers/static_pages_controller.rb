@@ -21,6 +21,12 @@ class StaticPagesController < ApplicationController
     @run = params[:run].to_i
     @abs = params[:abs].to_i
     @weights = params[:weights].to_i
+    
+    if (@run + @abs + @weights == 0)
+      flash[:danger] = "Error submitting form, please select at least one workout type"
+      redirect_to "/generate"
+    end
+    
     @run_duration, @ab_duration, @weight_duration, @ab_exercises, @lifts = generate_workout(@duration, @run, @abs, @weights)
   end
 end
