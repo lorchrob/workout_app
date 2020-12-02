@@ -1,11 +1,12 @@
 <% provide(:title, "Generated Workout") %>
 
-<h2>Duration: <%= @duration %>, Run: <%= @run %>, Abs: <%= @abs %>, Weights: <%= @weights %></h3>
-<h4>Run Duration: <%= @run_duration %></h4>
-<h4>Ab Duration: <%= @ab_duration %></h4>
-<h4>Weight Duration: <%= @weight_duration %></h4>
-<h4>Ab Exercises: <%= @ab_exercises %></h4>
-<h4>Lift Exercises: <%= @lifts %></h4>
+<ul class="list-group">
+  <li class="list-group-item table-custom">Run Duration: <%= @run_duration %></li>
+  <li class="list-group-item table-custom">Ab Duration: <%= @ab_duration %></li>
+  <li class="list-group-item table-custom">Weight Duration: <%= @weight_duration %></li>
+  <li class="list-group-item table-custom">Ab Exercises: <%= @ab_exercises %></li>
+  <li class="list-group-item table-custom">Lift Exercises: <%= @lifts %></li>
+</ul>
 
 <%= form_tag("generate", method: "get") do %>
   <%= submit_tag("Generate new workout", class: "btn btn-custom" ) %>
