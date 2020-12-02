@@ -10,7 +10,7 @@ class RunsController < ApplicationController
   def create
     @run = current_user.runs.build(user_params)
     if @run.save
-     redirect_to "/log"
+      redirect_to "/log"
     else
       flash.now[:danger] = "Error submitting form"
       render 'new'
