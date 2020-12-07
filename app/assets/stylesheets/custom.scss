@@ -15,6 +15,10 @@ $font: "Nunito";
 
 /* universal */
 
+html, body {
+  height: 100%;
+}
+
 body {
   padding-top: 60px;
   background-color: $primary;
@@ -37,7 +41,7 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6, p, label {
+h1, h2, h3, h4, h5, h6, p, label, ul {
   line-height: 1;
   color: $secondary;
   font-family: $font;
