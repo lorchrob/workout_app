@@ -4,8 +4,8 @@
   <li class="list-group-item table-custom">Run Duration (minutes): <%= @run_duration %></li>
   <li class="list-group-item table-custom">Ab Duration (minutes): <%= @ab_duration %></li>
   <li class="list-group-item table-custom">Weight Duration (minutes): <%= @weight_duration %></li>
-  <li class="list-group-item table-custom">Ab Exercises: <%= @ab_exercises %></li>
-  <li class="list-group-item table-custom">Lift Exercises: <%= @lifts %></li>
+  <li class="list-group-item table-custom">Ab Exercises: <%= @ab_exercises.join(', ') %></li>
+  <li class="list-group-item table-custom">Lift Exercises: <%= @lifts.join(', ') %></li>
 </ul>
 
 <%= form_tag("generate", method: "get") do %>
