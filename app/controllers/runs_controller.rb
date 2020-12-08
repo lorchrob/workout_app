@@ -17,6 +17,11 @@ class RunsController < ApplicationController
     end
   end
   
+  def destroy
+    Run.find(params[:id]).destroy
+    redirect_to "/log"
+  end
+  
   private
   
     def user_params

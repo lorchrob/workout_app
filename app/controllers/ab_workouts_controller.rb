@@ -17,6 +17,11 @@ class AbWorkoutsController < ApplicationController
     end
   end
   
+  def destroy
+    AbWorkout.find(params[:id]).destroy
+    redirect_to "/log"
+  end
+  
   private
   
     def user_params

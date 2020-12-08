@@ -17,6 +17,11 @@ class WeightWorkoutsController < ApplicationController
     end
   end
   
+  def destroy
+    WeightWorkout.find(params[:id]).destroy
+    redirect_to "/log"
+  end
+  
   private
   
     def user_params
