@@ -1,18 +1,22 @@
-<header class="navbar navbar-fixed-top navbar-custom">
-  <div class="container">
-    <%= link_to "Workout Buddy", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", landing_path %></li>
-        <li><%= link_to "About", about_path %></li>
-        <% if logged_in? %>
-          <li><%= link_to "Exercise Log",  log_path %></li>
-          <li><%= link_to "Generate Workout",  generate_path %></li>
-          <li><%= link_to "Log out", logout_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-        <% end %>
-      </ul>
+
+    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-custom" style="padding-left: 20px; padding-right: 20px">
+        <%= link_to "Workout Buddy", root_path, id: "logo" %>
+        
+        <button style="float: right; margin-top: 12px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse sticky-top" id="navbarNav">
+          <ul class="nav navbar-nav navbar-right ml-auto">
+            <li><%= link_to "Home", landing_path %></li>
+            <li><%= link_to "About", about_path %></li>
+            <% if logged_in? %>
+              <li><%= link_to "Exercise Log",  log_path %></li>
+              <li><%= link_to "Generate",  generate_path %></li>
+              <li><%= link_to "Log out", logout_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Log in", login_path %></li>
+            <% end %>
+          </ul>
+        </div>
     </nav>
-  </div>
-</header>
