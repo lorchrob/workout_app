@@ -10,7 +10,7 @@ module StaticPagesHelper
     lifts = []
     
     if run == 1
-      if num_left == 1
+      if num_left == 1 || duration <= 10
         run_duration = duration
       else
         run_duration = rand(duration)
